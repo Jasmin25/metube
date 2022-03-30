@@ -7,5 +7,5 @@ services:
     user: "1001:1001"
     ports:
       - "8081:8081"
-#     volumes:
-#       - /path/to/downloads:/downloads
+    volumes:
+      - /media:/downloads
