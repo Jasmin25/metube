@@ -24,8 +24,8 @@ COPY favicon ./favicon
 COPY app ./app
 COPY --from=builder /metube/dist/metube ./ui/dist/metube
 
-ENV DOWNLOAD_DIR /downloads
-ENV STATE_DIR /downloads/.metube
+ENV DOWNLOAD_DIR .
+ENV STATE_DIR ./.metube
 # VOLUME /downloads
 EXPOSE 8081
 CMD ["python3", "app/main.py"]
