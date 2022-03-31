@@ -130,7 +130,8 @@ async def on_prepare(request, response):
 
 app.on_response_prepare.append(on_prepare)
 
+port = int(os.environ.get('PORT', 8081))
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)
-    web.run_app(app, port=8081)
+    web.run_app(app, port=port)
