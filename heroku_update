@@ -1,0 +1,6 @@
+heroku login
+heroku auth:token | docker login --username=_ registry.heroku.com --password-stdin
+git clone https://github.com/Jasmin25/metube.git
+cd metube
+heroku container:push web --app selfhosted-metube
+heroku container:release web --app selfhosted-metube
